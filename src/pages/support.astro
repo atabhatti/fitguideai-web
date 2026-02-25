@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Support — FitGuideAI" description="Get help with FitGuideAI. Contact us for support, bug reports, or feedback.">
+  <div class="mx-auto max-w-3xl px-6 py-16">
+    <h1 class="mb-4 text-4xl font-bold">Support</h1>
+    <p class="mb-12 text-lg text-fg-white/70">
+      We're here to help. Choose the best way to reach us below.
+    </p>
+
+    <div class="grid gap-6 sm:grid-cols-2">
+      <a
+        href="mailto:help@fitguideai.com"
+        class="group rounded-2xl border border-fg-card-border bg-fg-card p-6 transition-colors hover:border-fg-accent/30"
+      >
+        <div class="mb-3 text-3xl">💬</div>
+        <h2 class="mb-2 text-xl font-semibold text-fg-white group-hover:text-fg-accent transition-colors">
+          General Help
+        </h2>
+        <p class="mb-3 text-sm text-fg-white/70">
+          Questions about the app, your account, workouts, or features.
+        </p>
+        <p class="text-sm font-medium text-fg-accent">help@fitguideai.com</p>
+      </a>
+
+      <a
+        href="mailto:bugs@fitguideai.com"
+        class="group rounded-2xl border border-fg-card-border bg-fg-card p-6 transition-colors hover:border-fg-accent/30"
+      >
+        <div class="mb-3 text-3xl">🐛</div>
+        <h2 class="mb-2 text-xl font-semibold text-fg-white group-hover:text-fg-accent transition-colors">
+          Bug Reports
+        </h2>
+        <p class="mb-3 text-sm text-fg-white/70">
+          Found something broken? Let us know what happened and we'll fix it.
+        </p>
+        <p class="text-sm font-medium text-fg-accent">bugs@fitguideai.com</p>
+      </a>
+    </div>
+
+    <div class="mt-12 rounded-2xl border border-fg-card-border bg-fg-card p-6">
+      <h2 class="mb-4 text-xl font-semibold">Tips for Bug Reports</h2>
+      <ul class="space-y-2 text-sm text-fg-white/70">
+        <li>Describe what you were doing when the issue occurred</li>
+        <li>Include your device model and iOS version</li>
+        <li>Attach screenshots or screen recordings if possible</li>
+        <li>Mention if the issue happens every time or only sometimes</li>
+      </ul>
+    </div>
+
+    <div class="mt-12 text-center">
+      <p class="text-fg-muted">
+        You can also check our <a href="/faq" class="text-fg-accent hover:underline">FAQ</a> for answers to common questions.
+      </p>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,17 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+const { frontmatter } = Astro.props;
+---
+
+<BaseLayout title={frontmatter.title} description={frontmatter.description}>
+  <div class="mx-auto max-w-3xl px-6 py-16">
+    <h1 class="mb-8 text-4xl font-bold text-fg-white">{frontmatter.title}</h1>
+    {frontmatter.lastUpdated && (
+      <p class="mb-8 text-sm text-fg-muted">Last updated: {frontmatter.lastUpdated}</p>
+    )}
+    <article class="prose prose-invert prose-lg max-w-none prose-headings:text-fg-white prose-p:text-fg-white/80 prose-a:text-fg-accent prose-strong:text-fg-white prose-li:text-fg-white/80">
+      <slot />
+    </article>
+  </div>
+</BaseLayout>

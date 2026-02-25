@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --fg-black: #0a0a0a;
+    --fg-card: #1a1a1a;
+    --fg-card-border: #2a2a2a;
+    --fg-white: #f5f5f5;
+    --fg-muted: #8a8a8a;
+    --fg-accent: #e8ff47;
+    --fg-accent-dim: #b8cc39;
+    --fg-gold: #ffd700;
+    --fg-sheet: #141414;
+    --fg-green: #4caf50;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-fg-black text-fg-white antialiased;
+  }
+}

@@ -1,0 +1,100 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import FeatureCard from '../components/FeatureCard.astro';
+
+const features = [
+  {
+    icon: '🧬',
+    title: 'Personalized Programs',
+    description: 'Answer a few questions about your goals, experience, and equipment — get a complete training program built just for you.',
+  },
+  {
+    icon: '📊',
+    title: 'Smart Progression',
+    description: 'Automatic weight increases, plateau detection, and deload scheduling. Your program evolves as you get stronger.',
+  },
+  {
+    icon: '🏋️',
+    title: 'Gym Mode',
+    description: 'Step-by-step workout guidance with rest timers, plate calculators, and real-time tracking. Like having a coach in your pocket.',
+  },
+  {
+    icon: '🔥',
+    title: 'Muscle Heatmap',
+    description: 'Visual breakdown of weekly volume per muscle group. See exactly which muscles are getting trained and spot imbalances.',
+  },
+  {
+    icon: '📈',
+    title: 'Progress Tracking',
+    description: 'Track every set, rep, and weight. See your strength gains over time with clear charts and PR detection.',
+  },
+  {
+    icon: '⚙️',
+    title: 'Fully Customizable',
+    description: 'Edit any exercise, swap movements, adjust sets and reps. Your program, your rules — AI just gives you a head start.',
+  },
+];
+---
+
+<BaseLayout title="FitGuideAI — AI-Powered Workout Programming">
+  <Hero />
+
+  <section id="features" class="py-20">
+    <div class="mx-auto max-w-6xl px-6">
+      <h2 class="mb-4 text-center text-3xl font-bold sm:text-4xl">
+        Everything You Need to <span class="text-fg-accent">Train Smarter</span>
+      </h2>
+      <p class="mx-auto mb-14 max-w-2xl text-center text-fg-white/60">
+        FitGuideAI combines exercise science with AI to build, track, and optimize your training — no generic cookie-cutter plans.
+      </p>
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {features.map((f) => (
+          <FeatureCard icon={f.icon} title={f.title} description={f.description} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="border-t border-fg-card-border py-20">
+    <div class="mx-auto max-w-6xl px-6 text-center">
+      <h2 class="mb-4 text-3xl font-bold sm:text-4xl">
+        Built for <span class="text-fg-accent">Real Lifters</span>
+      </h2>
+      <p class="mx-auto mb-10 max-w-2xl text-fg-white/60">
+        Whether you train at a commercial gym, home gym, or just have bodyweight — FitGuideAI adapts to your setup.
+      </p>
+      <div class="grid gap-6 sm:grid-cols-3">
+        <div class="rounded-2xl border border-fg-card-border bg-fg-card p-6">
+          <p class="text-4xl font-bold text-fg-accent">100+</p>
+          <p class="mt-2 text-sm text-fg-muted">Exercises in the library</p>
+        </div>
+        <div class="rounded-2xl border border-fg-card-border bg-fg-card p-6">
+          <p class="text-4xl font-bold text-fg-accent">14</p>
+          <p class="mt-2 text-sm text-fg-muted">Muscle groups tracked</p>
+        </div>
+        <div class="rounded-2xl border border-fg-card-border bg-fg-card p-6">
+          <p class="text-4xl font-bold text-fg-accent">Free</p>
+          <p class="mt-2 text-sm text-fg-muted">No subscriptions, no paywalls</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20">
+    <div class="mx-auto max-w-3xl px-6 text-center">
+      <h2 class="mb-4 text-3xl font-bold sm:text-4xl">
+        Ready to Start?
+      </h2>
+      <p class="mb-8 text-fg-white/60">
+        FitGuideAI is coming soon to the App Store. Get notified when it launches.
+      </p>
+      <a
+        href="/support"
+        class="inline-block rounded-full bg-fg-accent px-8 py-3 text-base font-semibold text-fg-black transition-colors hover:bg-fg-accent-dim"
+      >
+        Contact Us
+      </a>
+    </div>
+  </section>
+</BaseLayout>

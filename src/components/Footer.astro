@@ -1,0 +1,35 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="border-t border-fg-card-border bg-fg-sheet">
+  <div class="mx-auto max-w-6xl px-6 py-12">
+    <div class="grid gap-8 sm:grid-cols-3">
+      <div>
+        <h3 class="mb-3 text-lg font-bold text-fg-white">
+          Fit<span class="text-fg-accent">Guide</span>AI
+        </h3>
+        <p class="text-sm text-fg-muted">
+          AI-powered workout programming tailored to your body, goals, and equipment.
+        </p>
+      </div>
+      <div>
+        <h4 class="mb-3 text-sm font-semibold uppercase tracking-wider text-fg-muted">Product</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/faq" class="text-fg-white/70 hover:text-fg-accent transition-colors">FAQ</a></li>
+          <li><a href="/support" class="text-fg-white/70 hover:text-fg-accent transition-colors">Support</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="mb-3 text-sm font-semibold uppercase tracking-wider text-fg-muted">Legal</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/privacy" class="text-fg-white/70 hover:text-fg-accent transition-colors">Privacy Policy</a></li>
+          <li><a href="/terms" class="text-fg-white/70 hover:text-fg-accent transition-colors">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-10 border-t border-fg-card-border pt-6 text-center text-sm text-fg-muted">
+      &copy; {currentYear} FitGuideAI. All rights reserved.
+    </div>
+  </div>
+</footer>

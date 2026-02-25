@@ -1,0 +1,25 @@
+---
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/faq', label: 'FAQ' },
+  { href: '/support', label: 'Support' },
+];
+---
+
+<header class="border-b border-fg-card-border bg-fg-black/90 backdrop-blur-sm sticky top-0 z-50">
+  <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+    <a href="/" class="text-xl font-bold text-fg-white">
+      Fit<span class="text-fg-accent">Guide</span>AI
+    </a>
+    <div class="flex items-center gap-6">
+      {navLinks.map((link) => (
+        <a
+          href={link.href}
+          class="text-sm text-fg-muted transition-colors hover:text-fg-white"
+        >
+          {link.label}
+        </a>
+      ))}
+    </div>
+  </nav>
+</header>
